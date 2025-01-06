@@ -4,10 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "juststart": "nodemon App.js"
+    "juststart": "nodemon App.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "ISC",
   "description": "",
   "dependencies": {
