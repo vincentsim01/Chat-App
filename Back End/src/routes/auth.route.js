@@ -1,12 +1,18 @@
 import express from 'express';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { signup, signin, logout } from "../controllers/auth.controller.js";
+
+let mongoUrl = "mongodb+srv://vincentkiathadi:YIfp7gktEi2USAWW@cluster0.nt2oupy.mongodb.net/chatapp?retryWrites=true&w=majority";
+
 
 const router = express.Router();
 
-router.post('/signup', (req, res) => {res.send ("signup route")})
+router.get('/', (req, res) => {res.send ("Home route")});
 
-router.post('/signin', (req, res) => {res.send ("signin route")})
+router.get('/signup', signup );
 
-router.post('/signout', (req, res) => {res.send ("signout route")})
+router.post('/signin', signin );
+
+router.post('/signout', logout );
 
 export default router;
